@@ -10,7 +10,7 @@ def create_gui(warehouse, callback=None):
     root = tk.Tk()
     root.title("Warehouse Management System")
 
-     # 창고 위치 레이블 관리를 위한 딕셔너리
+    # 창고 위치 레이블 관리를 위한 딕셔너리
     warehouse_labels = {}
 
     # 현재 창고 위치 섹션

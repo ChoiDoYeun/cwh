@@ -1,8 +1,7 @@
 # location_selected_callback
+# 버튼으로 출고기능
 from gui import create_gui
 from controls.update_labels import update_warehouse_labels
-from warehouse_class import Warehouse
-from motor.move_position import move_position
 from motor.in_out_mode import output_mode
 
 
