@@ -2,6 +2,7 @@
 from gui import create_gui
 from warehouse_class import Warehouse
 from motor.move_position import move_position
+from motor.in_out_mode import output_mode
 
 
 def location_selected_callback(location):

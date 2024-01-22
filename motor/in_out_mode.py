@@ -2,6 +2,7 @@
 from warehouse_class import Warehouse
 from motor.move_position import move_position
 from motor.move_item import move_item_high,move_item_low
+import time
 
 def input_mode(x,y,z): 
     warehouse = Warehouse()
