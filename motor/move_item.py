@@ -1,4 +1,5 @@
 # move_item.py
+# A 모터 동작
 from motor.move_motor import move_motor
 from motor.config import initialize
 
