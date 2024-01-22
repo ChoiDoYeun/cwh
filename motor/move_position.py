@@ -6,7 +6,7 @@ from motor.move_motor import move_motor
 
 def move_position(target_x, target_y, target_z):
     global current_x, current_y, current_z
-    X_STEP, X_DIR, Y_STEP, Y_DIR, Z_STEP, Z_DIR = initialize()
+    X_STEP, X_DIR, Y_STEP, Y_DIR, Z_STEP, Z_DIR, A_STEP,A_DIR  = initialize()
     # X축 이동
     steps, direction = calculate_steps_and_direction(current_x, target_x)
     print("x축 이동중")
