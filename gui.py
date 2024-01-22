@@ -4,6 +4,7 @@ from controls.button_clicked import button_clicked
 from controls.run import run
 from controls.stop import stop
 from controls.toggle_mode import toggle_mode
+from controls.update_labels import update_warehouse_labels
 
 def create_gui(warehouse, callback=None):
     root = tk.Tk()
@@ -31,15 +32,9 @@ def create_gui(warehouse, callback=None):
         label = tk.Label(frame, text=building, font=("Arial", 16), width=5, height=2)
         label.grid(row=3, column=0, columnspan=2, pady=5)
 
-    # 창고 데이터 업데이트 함수
-    def update_warehouse_labels():
-        for location, label in warehouse_labels.items():
-            label_text = warehouse.storage[location] if warehouse.storage[location] else ' '
-            label.config(text=label_text)
-        root.after(1000, update_warehouse_labels)  # 1초마다 업데이트
-
-    # 첫 업데이트 함수 호출
-    update_warehouse_labels()
+    # 업데이트 함수 호출
+    update_warehouse_labels(root, warehouse, warehouse_labels)
+    
 # 원하는 영역 선택 섹션
     choose_frame = tk.LabelFrame(root, text="CHOOSE WHAT U WANNA PICK AREA")
     choose_frame.grid(row=0, column=1, padx=10, pady=10)        
