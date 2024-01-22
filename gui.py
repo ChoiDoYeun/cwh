@@ -51,7 +51,7 @@ def create_gui(warehouse, callback=None):
     for i in range(6):
         for j in range(4):
             button_text = button_texts[i*4+j]
-            button = tk.Button(choose_frame, text=button_text, width=10, height=5,command=lambda bt=button_text: callback(bt) if callback else None)
+            button = tk.Button(choose_frame, text=button_text, width=10, height=5,command=lambda bt=button_text: callback(bt, root, warehouse, warehouse_labels) if callback else None)
             button.grid(row=i, column=j, padx=5, pady=5)
 
     # 모드 선택 섹션
