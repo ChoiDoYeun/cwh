@@ -12,10 +12,6 @@ def main():
     # # 미리 저장된 차량 정보 로딩
     warehouse.load_existing_items(existing_items)
     
-    qr_thread = threading.Thread(target=process_qr_code, args=(warehouse,))
-    qr_thread.daemon = True
-    qr_thread.start()
-    
     create_gui(warehouse, callback=location_selected_callback)
     
 if __name__ == "__main__":
