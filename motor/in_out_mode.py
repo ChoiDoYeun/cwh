@@ -11,9 +11,10 @@ def input_mode(x,y,z):
     print("입차중 : 함에 이동완료")
     move_position_go(x,y,z) # 입차장소로 이동
     time.sleep(1)
-    move_position_back(225,50,350) # 입차대기장소로 이동
+    move_item_high() 
     time.sleep(1)
-    move_item_high()    # 차를 함에서 입차장소로 이동
+    move_position_back(225,50,350) # 입차대기장소로 이동
+    # 차를 함에서 입차장소로 이동
     print("입차 완료")
     time.sleep(1)
     
