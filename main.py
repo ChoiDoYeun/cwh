@@ -1,5 +1,4 @@
-import threading
-from qr_processor import process_qr_code
+# main.py
 from gui import create_gui
 from warehouse_class import Warehouse
 from location_selected_callback import location_selected_callback
