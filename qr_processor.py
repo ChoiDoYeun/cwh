@@ -22,3 +22,4 @@ def process_qr_code(warehouse):
         
         # 15초마다 동작
         time.sleep(15)
+        
