@@ -36,3 +36,8 @@ class Warehouse:
         print("상태창에서 차량 제거")
         if location in self.storage:
             self.storage[location] = None
+            
+    def find_item(self, item):
+        for location, stored_item in self.storage.items():
+            if stored_item == item:
+                return location

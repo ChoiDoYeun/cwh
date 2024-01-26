@@ -3,7 +3,7 @@ import tkinter as tk
 from controls.button_clicked import button_clicked
 from controls.run import run
 from controls.stop import stop
-from controls.toggle_mode import input_on,input_off
+from controls.toggle_mode import input_on,input_off,output_off,output_on
 from controls.update_labels import update_warehouse_labels
 
 def create_gui(warehouse, callback=None):
@@ -66,11 +66,11 @@ def create_gui(warehouse, callback=None):
     input_off_button = tk.Button(mode_frame, text="INPUT OFF", width=10, height=5, command=input_off)
     input_off_button.pack(padx=5, pady=5)
     
-    # output_on_button = tk.Button(mode_frame, text="OUTPUT ON", width=10, height=5, command=lambda: output_on(warehouse))
-    # output_on_button.pack(padx=5, pady=5)
+    output_on_button = tk.Button(mode_frame, text="OUTPUT ON", width=10, height=5, command=lambda: output_on(warehouse))
+    output_on_button.pack(padx=5, pady=5)
 
-    # output_off_button = tk.Button(mode_frame, text="OUTPUT OFF", width=10, height=5, command=output_off)
-    # output_off_button.pack(padx=5, pady=5)
+    output_off_button = tk.Button(mode_frame, text="OUTPUT OFF", width=10, height=5, command=output_off)
+    output_off_button.pack(padx=5, pady=5)
 
 
     # 실행 및 중지 버튼 섹션

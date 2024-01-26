@@ -16,6 +16,16 @@ def input_off():
         qr_thread.raise_exception(StopThreadException)  # 예외를 발생시킵니다.
         qr_thread.join()  # 스레드가 종료될 때까지 기다립니다.
         
+def output_on(warehouse):
+    global qr_thread
+    qr_thread = threading.Thread(target=process_qr_code_output, args=(warehouse,))
+    qr_thread.start()
+    
+def output_off():
+    global qr_thread
+    if qr_thread:
+        qr_thread.raise_exception(StopThreadException)  # 예외를 발생시킵니다.
+        qr_thread.join()  # 스레드가 종료될 때까지 기다립니다.
 
 # 스레드 객체에 예외를 발생시키는 메서드 추가
 def raise_exception(self, exc):
